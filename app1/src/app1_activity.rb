@@ -10,7 +10,7 @@ ruboto_import_widgets :Button, :LinearLayout, :TextView, :ImageView
 class App1Activity
   def onCreate(bundle)
     super
-    set_title '航空機写真'
+    set_title '航空機'
 
     menu_contents
   rescue Exception
@@ -45,9 +45,12 @@ class App1Activity
       button :text => 'BOEING777-246',
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { ja772j }
-      button :text => 'BOEING767-346ER',
+      button :text => 'BOEING767-346',
              :layout => {:width => :match_parent},
-             :id => 43, :on_click_listener => proc { ja655j }
+             :id => 43, :on_click_listener => proc { ja8986 }
+      button :text => 'BOEING737-846',
+             :layout => {:width => :match_parent},
+             :id => 43, :on_click_listener => proc { ja326j }
       button :text => 'MENU',
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { menu_contents }
@@ -68,6 +71,9 @@ class App1Activity
       button :text => 'BOEING777-281',
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { ja8969 }
+      button :text => 'BOEING767-381',
+             :layout => {:width => :match_parent},
+             :id => 43, :on_click_listener => proc { ja8579 }
       button :text => 'MENU',
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { menu_contents }
@@ -80,6 +86,9 @@ class App1Activity
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { jal }
 
+      text_view :text => 'BOEING777-346ER', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
       picture.image_resource = Ruboto::R::drawable.ja739j
     end
@@ -91,19 +100,39 @@ class App1Activity
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { jal }
 
+      text_view :text => 'BOEING777-246', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
       picture.image_resource = Ruboto::R::drawable.ja772j
     end
   end
 
-  def ja655j
+  def ja8986
     self.content_view = linear_layout :orientation => :vertical do
       button :text => 'BACK',
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { jal }
 
+      text_view :text => 'BOEING767-346', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
-      picture.image_resource = Ruboto::R::drawable.ja655j
+      picture.image_resource = Ruboto::R::drawable.ja8986
+    end
+  end
+
+  def ja326j
+    self.content_view = linear_layout :orientation => :vertical do
+      button :text => 'BACK',
+             :layout => {:width => :match_parent},
+             :id => 43, :on_click_listener => proc { jal }
+
+      text_view :text => 'BOEING737-846', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
+      picture = image_view
+      picture.image_resource = Ruboto::R::drawable.ja326j
     end
   end
 
@@ -113,6 +142,9 @@ class App1Activity
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { ana }
 
+      text_view :text => 'BOEING777-381ER', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
       picture.image_resource = Ruboto::R::drawable.ja792a
     end
@@ -124,6 +156,9 @@ class App1Activity
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { ana }
 
+      text_view :text => 'BOEING787-881', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
       picture.image_resource = Ruboto::R::drawable.ja821a
     end
@@ -135,8 +170,25 @@ class App1Activity
              :layout => {:width => :match_parent},
              :id => 43, :on_click_listener => proc { ana }
 
+      text_view :text => 'BOEING777-281', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
       picture = image_view
       picture.image_resource = Ruboto::R::drawable.ja8969
+    end
+  end
+
+  def ja8579
+    self.content_view = linear_layout :orientation => :vertical do
+      button :text => 'BACK',
+             :layout => {:width => :match_parent},
+             :id => 43, :on_click_listener => proc { ana }
+
+      text_view :text => 'BOEING767-381', :id => 42,
+                :layout => {:width => :match_parent},
+                :gravity => :center, :text_size => 48.0
+      picture = image_view
+      picture.image_resource = Ruboto::R::drawable.ja8579
     end
   end
 end
